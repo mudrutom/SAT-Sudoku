@@ -1,3 +1,7 @@
+/MiniSat
+
+.idea
+*.iml
 *.class
 
 # Package Files #
