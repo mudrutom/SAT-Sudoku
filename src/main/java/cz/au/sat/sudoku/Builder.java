@@ -3,6 +3,7 @@ package cz.au.sat.sudoku;
 import cz.au.sat.Clause;
 import cz.au.sat.Factory;
 import cz.au.sat.Literal;
+import cz.au.sat.Variable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -121,6 +122,10 @@ public class Builder {
 		}
 
 		return true;
+	}
+
+	public static Variable var(int i, int j, int n) {
+		return factory.getVar(String.format("%d_%d_%d", i, j, n));
 	}
 
 	private static Literal pos(int i, int j, int n) {

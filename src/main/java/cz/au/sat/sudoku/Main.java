@@ -23,13 +23,13 @@ public class Main {
 				{0, 0, 4,  0, 0, 0,  0, 3, 0},
 				{0, 0, 0,  0, 0, 9,  7, 0, 0},
 		};
-		final SudokuCNF sudokuCNF = new SudokuCNF(sudoku);
+		final SudokuSAT sudokuSAT = new SudokuSAT(sudoku);
 
 		BufferedWriter writer = null;
 		try {
 			writer = new BufferedWriter(new FileWriter(FILE));
 
-			sudokuCNF.print(writer);
+			sudokuSAT.print(writer);
 
 			writer.flush();
 		} catch (IOException e) {
