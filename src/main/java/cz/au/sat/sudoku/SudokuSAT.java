@@ -29,8 +29,8 @@ public class SudokuSAT extends Formula {
 		for (int i = 0; i < size; i++) {
 			writer.append("c ");
 			for (int j = 0; j < size; j++) {
-				writer.append(String.format("\tv[%d,%d]:", i, j));
-				writer.append(String.format("%d-%d", Builder.var(i, j, 0).getNumber(), Builder.var(i, j, size - 1).getNumber()));
+				writer.append(String.format("\tv[%d,%d]:", i + 1, j + 1));
+				writer.append(String.format("%d..%d", Builder.var(i, j, 0).getNumber(), Builder.var(i, j, size - 1).getNumber()));
 			}
 			writer.append('\n');
 		}
